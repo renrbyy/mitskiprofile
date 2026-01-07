@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: white;
+            background-color: #f3efe8;
+            background-image: url('mitskibg2.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: transparent; 
+            border: 4px solid black;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img.banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        h1, h2, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black;
+            text-align: center;
+        }
+
+        nav {
+            background-color: black;
+            padding: 12px 0;
+            text-align: center;
+            border-top: 4px solid black;
+        }
+
+        nav a {
+            margin: 0 18px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        nav a:hover {
+            color: #b87f1e;
+        }
+        .gallery-title-section {
+            background-color: #940909ee;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery-title-section h1 {
+            font-family: verdana;
+            color: #4e2bc0;
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        .gallery-title-section p {
+            font-size: 0.9em;
+        }
+
+        .gallery-item {
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .item-color-1 {
+            background-color: #786e01cb;
+        }
+
+        .item-color-2 {
+            background-color: #a73d04d3;
+        }
+
+        .gallery-item img {
+            max-width: 500px;
+            width: 90%;
+            height: auto;
+            margin: 10px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .gallery-item .location {
+            font-size: 1em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .gallery-item .credit {
+            font-size: 0.8em;
+            color: lightgray;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: left;
+            padding: 15px 40px;
+            font-size: 14px;
+            border: 3px solid black; 
+            border-top: none;
+        }
+         #waktu {
+        background-color: #000000c9;
+        color: #f3efe8;
+        text-align: center;
+        padding: 8px 0;
+        font-size: 14px;
+        font-family: Verdana, Arial, sans-serif;
+        letter-spacing: 1px;
+        }
+ 
+    </style>
+    <script>
+    function tampilkanWaktu() {
+    const sekarang = new Date();
+
+    const hari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+    const bulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli",
+                   "Agustus","September","Oktober","November","Desember"];
+
+    let namaHari = hari[sekarang.getDay()];
+    let tanggal = sekarang.getDate();
+    let namaBulan = bulan[sekarang.getMonth()];
+    let tahun = sekarang.getFullYear();
+
+    let jam = sekarang.getHours();
+    let menit = sekarang.getMinutes();
+    let detik = sekarang.getSeconds();
+
+    if (menit < 10) menit = "0" + menit;
+    if (detik < 10) detik = "0" + detik;
+
+    let salam = "";
+    if (jam >= 5 && jam < 12) {
+        salam = "Selamat Pagi";
+    } else if (jam >= 12 && jam < 15) {
+        salam = "Selamat Siang";
+    } else if (jam >= 15 && jam < 18) {
+        salam = "Selamat Sore";
+    } else {
+        salam = "Selamat Malam";
+    }
+
+    document.getElementById("waktu").innerHTML =
+        salam + " — " +
+        namaHari + ", " + tanggal + " " + namaBulan + " " + tahun +
+        " | " + jam + ":" + menit + ":" + detik;
+}
+    setInterval(tampilkanWaktu, 1000);
+    tampilkanWaktu();
+</script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <img src="banner.jpg" alt="Mitski Banner" class="banner">
+    </header>
+    
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="about.html">ABOUT US</a>
+    </nav>
+    <div id="waktu"></div>
+
+    <section class="gallery-title-section">
+        <h1>GALLERY ALBUM</h1>
+        <p>Showcase album Mitski</p>
+    </section>
+ 
+    <section class="gallery-item item-color-1">
+        <span class="location">Bury Me At Makeout Creek (2014)</span>
+        <img src="bmamoc.jpg" alt="Bury Me At Makeout Creek">
+        <span class="credit">Bury Me at Makeout Creek adalah album studio ketiga dari musisi indie rock Amerika, Mitski, yang dirilis melalui Double Double Whammy pada 11 November 2014. Album ini seluruhnya ditulis oleh Mitski, dengan produksi ditangani oleh Patrick Hyland, yang juga memproduseri album sebelumnya, Retired from Sad, New Career in Business.</span>
+    </section>
+
+    <section class="gallery-item item-color-2">
+        <span class="location">Puberty 2 (2016)</span>
+        <img src="puberty2.jpg" alt="Puberty 2 2">
+        <span class="credit">Puberty 2 adalah album studio keempat dari penyanyi-penulis lagu indie pop Amerika, Mitski, yang dirilis pada 17 Juni 2016, rilisan pertama melalui Dead Oceans. Album ini diproduseri oleh kolaborator lamanya, Patrick Hyland. Setelah dirilis, Puberty 2 menerima pujian luas dari kritikus musik, dengan banyak yang memuji penyampaian emosional Mitski dan tema lirik yang kompleks, yang meliputi kerinduan, cinta, depresi, keterasingan, dan identitas rasial.</span>
+    </section>
+
+    <section class="gallery-item item-color-1">
+        <span class="location">Be the Cowboy (2018)</span>
+        <img src="btc.jpg" alt="Be the Cowboy">
+        <span class="credit">Be the Cowboy adalah album studio kelima dari musisi indie rock Amerika, Mitski, yang dirilis pada 17 Agustus 2018 melalui Dead Oceans. Diproduseri oleh kolaborator lamanya, Patrick Hyland, album ini memperluas palet musik Mitski dengan kembali menggunakan piano yang ditampilkan pada dua album pertamanya, bersama dengan synthesizer, alat musik tiup, dan gitar yang menjadi instrumen khasnya. Setelah dirilis, Be the Cowboy menerima pujian luas dari kritikus musik, yang kemudian menempatkannya di antara album terbaik tahun 2018.</span>
+    </section>
+
+    <section class="gallery-item item-color-2">
+        <span class="location">Laurel Hell (2022)</span>
+        <img src="laurelhell.jpg" alt="Laurel Hell">
+        <span class="credit">Laurel Hell adalah album studio keenam dari penyanyi-penulis lagu Amerika, Mitski, yang dirilis pada 4 Februari 2022 melalui Dead Oceans. Patrick Hyland memproduseri album ini, yang digambarkan sebagai album yang memadukan gaya synth-pop, indie pop, dan rock elektronik. Menurut Mitski, judul album ini adalah istilah rakyat untuk terjebak di semak belukar laurel yang tumbuh di Pegunungan Appalachian selatan. </span>
+    </section>
+<div id="footer"> &copy; CopyRight Restiana Rabiya|251011700995|01SIFP016</div>
+</div>
+</body>
+</html>

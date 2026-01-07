@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Arial, sans-serif;
+            line-height: 1.6;
+            color: white;
+            background-color: #f3efe8; 
+            background-image: url('mitskibg4.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: transparent; 
+            border: 4px solid black;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img.banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        header {
+            background-color: black;
+            text-align: center;
+        }
+
+        nav {
+            background-color: black;
+            padding: 12px 0;
+            text-align: center;
+            border-top: 4px solid black;
+        }
+
+        nav a {
+            margin: 0 18px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        nav a:hover {
+            color: #b87f1e;
+        }
+
+        section {
+            padding: 20px;
+            overflow: auto; 
+        }
+
+        .history-section {
+            background-color: #82176e78;
+            text-align: justify;
+        }
+        
+        .history-section img {
+            float: left;
+            width: 300px;
+            height: auto;
+            margin: 0 20px 20px 0;
+        }
+
+        .members-section {
+            background-color: #89009378;
+        }
+
+        .members-section img {
+            float: right;
+            width: 500px;
+            height: auto;
+            margin: 0 0 20px 40px;
+        }
+        
+        .members-section h2, .members-section h3 {
+            color: #3BCC07;
+            font-family: verdana;
+            margin-top: 20px;
+        }
+        
+        .members-section h2 {
+             margin-top: 0;
+        }
+
+        .members-section ol, .members-section ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color:#00000078;
+            color: white;
+            text-align: left;
+            padding: 15px 40px;
+            font-size: 14px;
+            border: 3px solid rgb(147, 5, 5); 
+            border-top: none;
+        }
+        #waktu {
+        background-color: #000000c9;
+        color: #f3efe8;
+        text-align: center;
+        padding: 8px 0;
+        font-size: 14px;
+        font-family: Verdana, Arial, sans-serif;
+        letter-spacing: 1px;
+        }
+ 
+    </style>
+
+    <script>
+    function tampilkanWaktu() {
+    const sekarang = new Date();
+
+    const hari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+    const bulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli",
+                   "Agustus","September","Oktober","November","Desember"];
+
+    let namaHari = hari[sekarang.getDay()];
+    let tanggal = sekarang.getDate();
+    let namaBulan = bulan[sekarang.getMonth()];
+    let tahun = sekarang.getFullYear();
+
+    let jam = sekarang.getHours();
+    let menit = sekarang.getMinutes();
+    let detik = sekarang.getSeconds();
+
+    if (menit < 10) menit = "0" + menit;
+    if (detik < 10) detik = "0" + detik;
+
+    let salam = "";
+    if (jam >= 5 && jam < 12) {
+        salam = "Selamat Pagi";
+    } else if (jam >= 12 && jam < 15) {
+        salam = "Selamat Siang";
+    } else if (jam >= 15 && jam < 18) {
+        salam = "Selamat Sore";
+    } else {
+        salam = "Selamat Malam";
+    }
+
+    document.getElementById("waktu").innerHTML =
+        salam + " — " +
+        namaHari + ", " + tanggal + " " + namaBulan + " " + tahun +
+        " | " + jam + ":" + menit + ":" + detik;
+}
+    setInterval(tampilkanWaktu, 1000);
+    tampilkanWaktu();
+</script>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <img src="banner.jpg" alt="Mitski Banner" class="banner">
+    </header>
+    
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="about.html">ABOUT US</a>
+    </nav>
+
+    <div id="waktu"></div>
+
+    <section class="history-section">
+    <img src="mitskiabout.jpg" alt="Mitski photo">
+    <p>
+    <b>Mitski</b> (Mitski Miyawaki) adalah seorang <i>penyanyi dan penulis lagu indie rock</i> asal <u>Amerika Serikat</u> yang lahir pada 27 September 1990. 
+    Ia dikenal melalui karya-karyanya yang emosional, lirik yang reflektif, serta eksplorasi tema-tema seperti identitas, kesepian, cinta, dan keterasingan. 
+    Mitski mulai merilis musik secara independen saat menempuh pendidikan di Purchase College Conservatory of Music, New York, 
+    dan dengan cepat menarik perhatian publik karena pendekatan artistiknya yang jujur dan personal.
+    </p>
+<p>
+    Album-album awal Mitski, yaitu <b>Lush</b> (2012) dan <b>Retired from Sad, New Career in Business</b> (2013), menunjukkan gaya eksperimental yang memadukan unsur musik klasik dan indie rock. 
+    Namanya semakin dikenal luas melalui album <b>Bury Me at Makeout Creek</b> (2014) dan <b>Puberty 2</b> (2016), yang mendapatkan pujian kritikus dan memperkuat posisinya sebagai salah satu musisi indie paling berpengaruh. 
+    Kesuksesan berlanjut dengan album <b>Be the Cowboy</b> (2018), yang menampilkan pendekatan musik lebih ringkas dan modern.
+    Setelah jeda singkat dari dunia musik, Mitski kembali dengan album <b>The Land Is Inhospitable and So Are We</b> (2023), 
+    yang menandai fase musikal baru dengan nuansa folk dan orkestrasi yang lebih minimalis. 
+    Melalui perjalanan kariernya, Mitski dikenal sebagai figur penting dalam perkembangan musik indie kontemporer.
+</p>
+    </section>
+
+    <section class="members-section">
+    <h2>Album Populer Mitski</h2>
+<ol>
+    <li><a href="buryme.html">Bury Me at Makeout Creek (2014)</a></li>
+    <li><a href="puberty2.html">Puberty 2 (2016)</a></li>
+    <li><a href="tliiasaw.html">The Land Is Inhospitable and So Are We (2023)</a></li>
+</ol>
+
+<h3>Musisi Tur</h3>
+<ul>
+    <li>Patrick Hyland – gitar</li>
+    <li>Devin Hoff – bass</li>
+    <li>Judith Hamann – cello</li>
+    <li>Jesse Keeler – drum dan perkusi</li>
+</ul>
+    </section>
+<div id="footer"> &copy; CopyRight Restiana Rabiya|251011700995|01SIFP016</div>
+</div>
+</body>
+</html>

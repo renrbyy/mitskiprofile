@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitski</title>
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Arial, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #f3efe8;
+            background-image: url('mitskibg.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: transparent;
+            border: 4px solid black;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img.banner {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        h1, h2, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black;
+            text-align: center;
+        }
+
+        nav {
+            background-color: black;
+            padding: 12px 0;
+            text-align: center;
+            border-top: 4px solid black;
+        }
+
+        nav a {
+            margin: 0 18px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        nav a:hover {
+            color: #b87f1e;
+        }
+
+        section {
+            padding: 25px 40px;
+            margin-bottom: 0;
+            color: white;
+        }
+
+        .welcome-section {
+            background-color: #821717;
+            text-align: center;
+        }
+        
+        .welcome-section h2 {
+            color: #b87f1e;
+            font-family: verdana;
+        }
+
+
+        .album-highlight {
+            background-color: #9a844de2;
+            overflow: auto;
+        }
+
+        .album-highlight h2 {
+            color: #762500;
+            font-family: verdana;
+        }
+        
+        .album-highlight img {
+            float: right;
+            width: 300px;
+            height: auto;
+            margin: 0 0 20px 40px;
+        }
+
+        .gallery-preview {
+            background-color: #5b3c02e4;
+            text-align: center;
+        }
+        
+        .gallery-preview h2 {
+             color: #762500;
+             font-family: verdana;
+        }
+
+        .gallery-preview img {
+            width: 200px;
+            height: 130px;
+            margin: 10px;
+        }
+        
+        .gallery-preview a {
+            color: #ffffff;
+        }
+
+        .news-section {
+            background-color: #a54a25c9;
+        }
+        
+        .news-section h2 {
+            text-align: center;
+            color: #ff0505;
+        }
+        
+        .news-section ul {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+
+
+        .explore-section {
+            background-color: #690101c1;
+            text-align: center;
+        }
+        
+        .explore-section a {
+             color: #000000;
+            
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: left;
+            padding: 15px 40px;
+            font-size: 14px;
+            border: 3px solid black; 
+            border-top: none;
+        }
+        #waktu {
+        background-color: #000000c9;
+        color: #f3efe8;
+        text-align: center;
+        padding: 8px 0;
+        font-size: 14px;
+        font-family: Verdana, Arial, sans-serif;
+        letter-spacing: 1px;
+        }
+ 
+    </style>
+    <script>
+    function tampilkanWaktu() {
+    const sekarang = new Date();
+
+    const hari = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+    const bulan = ["Januari","Februari","Maret","April","Mei","Juni","Juli",
+                   "Agustus","September","Oktober","November","Desember"];
+
+    let namaHari = hari[sekarang.getDay()];
+    let tanggal = sekarang.getDate();
+    let namaBulan = bulan[sekarang.getMonth()];
+    let tahun = sekarang.getFullYear();
+
+    let jam = sekarang.getHours();
+    let menit = sekarang.getMinutes();
+    let detik = sekarang.getSeconds();
+
+    if (menit < 10) menit = "0" + menit;
+    if (detik < 10) detik = "0" + detik;
+
+    let salam = "";
+    if (jam >= 5 && jam < 12) {
+        salam = "Selamat Pagi";
+    } else if (jam >= 12 && jam < 15) {
+        salam = "Selamat Siang";
+    } else if (jam >= 15 && jam < 18) {
+        salam = "Selamat Sore";
+    } else {
+        salam = "Selamat Malam";
+    }
+
+    document.getElementById("waktu").innerHTML =
+        salam + " — " +
+        namaHari + ", " + tanggal + " " + namaBulan + " " + tahun +
+        " | " + jam + ":" + menit + ":" + detik;
+}
+    setInterval(tampilkanWaktu, 1000);
+    tampilkanWaktu();
+</script>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <!-- Banner -->
+        <img src="banner.jpg" alt="Mitski Banner" class="banner">
+    </header>
+    
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="about.html">ABOUT US</a>
+    </nav>
+    <div id="waktu"></div>
+
+
+    <!-- Content -->
+    <section class="welcome-section">
+        <h2>Welcome to Mitski Fan Page!</h2>
+    </section>
+
+    <section class="album-highlight">
+        <img src="The Land Is Inhospitable and So Are We.jpg" alt="The Land Is Inhospitable and So Are We Album Cover">
+        <h2>Album Terbaru: <i>The Land Is Inhospitable and So Are We (2024)</i></h2>
+        <p align="justify">
+            <b>The Land Is Inhospitable and So Are We</b> adalah album studio ketujuh oleh musisi indie rock asal Amerika Serikat, <b>Mitski</b>.
+            Album ini dirilis pada 15 September 2023 melalui label <i>Dead Oceans</i>, dan menandai kembalinya Mitski setelah jeda perilisan pasca album <i>Laurel Hell</i> (2022).
+
+            Album ini merupakan sebuah karya konseptual yang berfokus pada tema kesepian, cinta, iman, keterasingan, dan hubungan manusia dengan dirinya sendiri
+            serta dengan dunia di sekitarnya. Judul album mencerminkan pandangan reflektif Mitski terhadap kehidupan modern,
+            di mana lingkungan yang keras sering kali beriringan dengan emosi manusia yang rapuh dan penuh kontradiksi.
+
+            Secara musikal, <b>The Land Is Inhospitable and So Are We</b> menampilkan pendekatan yang lebih minimalis dan organik
+            dibandingkan karya-karya Mitski sebelumnya. Album ini banyak menggunakan instrumen akustik,
+            aransemen string, serta elemen paduan suara yang terinspirasi dari musik gospel dan folk,
+            menciptakan suasana hangat namun melankolis.
+            Genre yang dihadirkan mencakup <i>indie rock, folk, chamber pop</i>, dan sentuhan musik gospel.
+
+            Lagu pembuka album, <b>"Bug Like an Angel"</b>, berfungsi sebagai pengantar emosional terhadap keseluruhan narasi album,
+            menggambarkan pergulatan batin, rasa bersalah, serta pencarian makna dan pengampunan.
+            Sepanjang album, Mitski menggunakan lirik yang puitis dan simbolis untuk mengeksplorasi dinamika cinta,
+            kerinduan, serta batasan antara harapan dan keputusasaan.
+
+            Album ini diproduksi oleh <b>Mitski</b> bersama <b>Patrick Hyland</b>, yang juga merupakan kolaborator lama dalam proses kreatifnya.
+            Saat dirilis, album ini menerima tanggapan yang sangat positif dari para kritikus musik,
+            yang memuji kedewasaan emosional, konsistensi konsep, serta keberanian Mitski dalam menyederhanakan aransemen
+            tanpa mengurangi kedalaman makna.
+
+            Secara komersial, <b>The Land Is Inhospitable and So Are We</b> berhasil menempati posisi puncak di berbagai tangga album internasional,
+            termasuk debut di peringkat pertama di beberapa negara.
+            Album ini dianggap sebagai salah satu karya paling intim dan reflektif dalam diskografi Mitski,
+            serta memperkuat posisinya sebagai salah satu penulis lagu paling berpengaruh di musik alternatif kontemporer.
+        </p>
+
+    </section>
+
+    <section class="gallery-preview">
+        <h2>Cuplikan Konser</h2>
+        <img src="concert1.jpg" alt="Concert 1">
+        <img src="concert3.jpg" alt="Concert 2">
+        <img src="concert2.jpg" alt="Concert 3">
+        <br><br>
+        <a href="gallery.html">Lihat gallery album Mitski selengkapnya di halaman Gallery &raquo;</a>
+    </section>
+
+    <section class="news-section">
+    <h2>Berita Terbaru</h2>
+    <ul>
+        <li><b>September 2023:</b> Mitski merilis album terbarunya <i>The Land Is Inhospitable and So Are We</i> yang mendapat sambutan hangat dari kritikus musik internasional.</li>
+        <li><b>Oktober 2023:</b> Mitski memulai rangkaian tur konser untuk mendukung album tersebut di Amerika Utara dan Eropa.</li>
+    </ul>
+    </section>
+
+    <section class="explore-section">
+        <p>
+            Ingin tahu lebih banyak tentang sejarah Mitski?<br>
+            Kunjungi halaman <a href="about.html"><b>ABOUT US</b></a> 
+            untuk mengenal Mitski lebih dalam!
+        </p>
+    </section>
+<div id="footer"> &copy; CopyRight Restiana Rabiya|251011700995|01SIFP016</div>
+</div>
+
+</body>
+</html>
